@@ -9,6 +9,16 @@ function randomEmoji() {
     return emojis[Math.floor(Math.random() * emojis.length)];
 }
 
+function CountCard(card) {
+    if (2 <= card && card <= 5) {
+        return 1;
+    } else if (card == "A" || card == "J" || card == "Q" || card == "K") {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
 function main() {
     var myarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     var myarray2D = [["apple", "orange", "banana"], ["pear", "grape", "watermelon"]];
@@ -37,7 +47,7 @@ function main() {
     console.log(myarray2D);
     console.log(JSON.stringify(myarray2D));
 
-    console.log(randomEmoji() +" "+randomEmoji() +" "+ randomEmoji());
+    console.log(randomEmoji() + " " + randomEmoji() + " " + randomEmoji());
 
     var mynum = 5;
     console.log(mynum);
@@ -50,7 +60,5 @@ function main() {
         console.log("mynum is equal to 5");
     }
 
-
 }
-
 main();
